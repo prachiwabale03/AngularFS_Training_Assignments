@@ -23,11 +23,11 @@ class Customer
 
 let c1:Customer = new Customer();
 
-let c2:Customer = new Customer(10256);
+let c2:Customer = new Customer(10);
 
-let c3:Customer = new Customer(10256, "Scott");
+let c3:Customer = new Customer(20, "Prachi");
 
-let c4:Customer = new Customer(10256, "Scott", "Hyd");
+let c4:Customer = new Customer(30, "Supriya", "Pune");
 
 c1.showDetails();
 c2.showDetails();
