@@ -52,7 +52,7 @@ class Product
 
 let productObj:Product = new Product(45645);
 
-productObj.ProductName = "Prachi";  //set
+productObj.ProductName = "Ball";  //set
 
 productObj.Quantity = 10;  //set
 
