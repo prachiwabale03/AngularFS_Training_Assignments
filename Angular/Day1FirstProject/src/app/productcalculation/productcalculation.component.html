@@ -1,0 +1,22 @@
+<p>productcalculation works!</p>
+<legend>Product Calculation</legend>
+
+<table>
+    <tr>
+        Product Name: <input type="text" [(ngModel)]="pname" />
+    </tr>
+<tr>
+Unit Price: <input type="number" [(ngModel)]="price" />
+</tr>
+<tr>
+    Quantity: <input type="number" [(ngModel)]="quantity" />
+    </tr>
+    <tr>
+        <button (click)="calculateTotal()" type="submit">Get Total</button>
+        </tr>
+        <tr>   <p [style.color]="color">Total Amount:{{totalAmount}}</p></tr>
+
+     
+</table>
+
+
