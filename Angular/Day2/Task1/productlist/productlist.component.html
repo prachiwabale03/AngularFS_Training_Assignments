@@ -1,0 +1,29 @@
+<p>Productlist Details!</p>
+
+<style>
+    .c1
+    {
+        border: 1px solid gray;
+        border-radius : 10px;
+        width : 150px;
+        padding : 5px;
+        text-align: center;
+        margin: 5px;
+        float:left;
+        box-shadow: 5px 5px 2px black;
+    }
+  </style>
+  
+  <div  *ngFor="let productObj of filteredArray" class="c1">
+    <h3 style="margin: 2px;color:green;"> {{productObj.pname}} </h3>
+    <u> Product No :   {{productObj.pid}} </u>  <br/>
+
+    Product price : <span style="color:Green;"> {{productObj.price}} </span>   <br/>
+    Product Category : <span style="color:Green;"> {{productObj.category}} </span>   <br/>
+
+  </div>
+  
+  
+  <div *ngIf="filteredArray.length == 0">
+    <h1>No Product available in selected category.</h1>
+  </div>

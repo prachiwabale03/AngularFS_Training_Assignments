@@ -1,0 +1,46 @@
+Percent Pipe:
+
+The percentPipe is used to Transform a number to a percentage string.
+
+{{ value_expression | percent [ : digitsInfo [ : locale ] ] }}
+
+For E.g-
+number1: number = 0.25;
+1.Default case:{{number1 | percent }} ->25%
+minIntegerDigits: 1
+minFractionDigits: 0
+maxFractionDigits: 3
+
+2.Format: ‘3.1-5’
+{{number1 | percent:'3.1-5'}} -> 025.0%
+minIntegerDigits: 3
+minFractionDigits: 1
+maxFractionDigits: 5
+
+******************************************************************************************
+
+DecimalPipe:
+
+Formats a value according to digit options and locale rules. Locale determines group sizing and separator, decimal point character, and other locale-specific configurations.
+
+locale will format a value according to locale rules. Locale determines group sizing and separator, decimal point character, and other locale-specific configurations.
+
+When not supplied, uses the value of LOCALE_ID, which is en-US by default.
+{{ value_expression | number [ : digitsInfo [ : locale ] ] }}
+
+
+
+digitsInfo parameter:{minIntegerDigits}.{minFractionDigits}-{maxFractionDigits}------default values are:1,0,3
+
+For E.g-
+
+  pi: number = 3.14159265359;
+
+{{pi | number}}
+      <!--output: '3.142'-->
+
+ {{pi | number:'4.1-5'}}
+      <!--output: '0,003.14159'-->
+
+{{pi | number:'4.1-5':'fr'}}
+      <!--output: '0 003,14159'-->
