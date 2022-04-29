@@ -1,0 +1,30 @@
+<!-- <div style="background-color: lightyellow; border: 1px solid black; padding: 10px;">
+<a  [(ngModel)]="strId" data-vale="EmpId" (click)="sortId_click()" href="javascript:void(0);">EmpId</a>
+</div> -->
+
+<style>
+    .center{
+        left: 100% !important;
+  right: auto !important;
+  text-align: center !important;
+  background-color: lightyellow; border: 1px solid black; padding: 10px;
+    }
+ 
+</style>
+<div class="center">
+
+
+    Select Sort Column  :
+    <select [(ngModel)]="strOption" (change)="sort_click()">
+      <option  value=""></option>
+      <option>EmpId</option>
+      <option>EmpName</option>
+      <option>EmpJob</option>
+      <option>EmpSalary</option>
+      <option>EmpDeptNo</option>
+    
+
+    </select>
+</div>
+
+    

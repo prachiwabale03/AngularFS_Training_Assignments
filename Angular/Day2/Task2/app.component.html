@@ -1,0 +1,7 @@
+<h3 align="center">Component Communication in Angular</h3>
+<hr/>
+
+<app-emp-sort-options  (onIdClick)="updateEmpID($event)">
+</app-emp-sort-options>
+<hr/>
+<app-emp-list  [sortColumn]="selectedOption"></app-emp-list> 
