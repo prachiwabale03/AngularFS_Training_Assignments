@@ -16,9 +16,16 @@
      color: brown;
    
   }
-</style>
-  <button (click)="loadMore_click()" [disabled]="flag">Load More</button>
+  .center{
+        left: 100% !important;
+  right: auto !important;
+  text-align: center !important;
  
+    }
+</style>
+<div class="center">
+  <button  (click)="loadMore_click()" [disabled]="flag" float="left">Load More</button>
+</div>
   <div class="row" *ngFor="let user of userArray | slice:start:end" >
   
   
