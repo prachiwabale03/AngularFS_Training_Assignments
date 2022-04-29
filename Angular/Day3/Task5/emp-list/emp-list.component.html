@@ -1,0 +1,41 @@
+<h3>Working with Services in Angular</h3>
+<hr/>
+<table>
+    <th>  Emp No:<input type="text"  [(ngModel)]="empno"  placeholder="EmpNo"  /></th>
+  
+
+<th>Emp Name:<input type="text"  [(ngModel)]="ename"  placeholder="Ename"  /></th>
+<th>Emp job:<input type="text"  [(ngModel)]="job"  placeholder="Job"  /></th>
+<th>Emp Salary:<input type="text"  [(ngModel)]="sal"  placeholder="Salary"  /></th>
+<th>Emp Dept:<input type="text"  [(ngModel)]="deptno"  placeholder="DeptNo"  /></th>
+</table>
+
+<hr/>
+<button (click)="getData_click()">Get Data</button>
+<button (click)="addEmployee_click()">Add Employee</button>
+
+ <br/><br/>
+ <table width="500"  cellspacing="0"  cellpadding="3"  border="2">
+  <tr>
+    <th>Emp Number</th>
+    <th>Emp Name</th>
+    <th>Emp Job</th>
+    <th>Emp Salary</th>
+    <th>Emp Deptno</th>
+  </tr>
+
+  <tr *ngFor="let item of empsArray">
+      <td>{{item.empno}}</td>
+      <td>{{item.ename | titlecase}}</td>
+      <td>{{item.job | uppercase}}</td>
+      <td>{{item.sal | currency}}</td>
+      <td>{{item.deptno}}</td>
+      <td><a  (click)="delete_click(item.empno)" href="javascript:void(0);">
+        <img src="assets/delete.png" alt="" width="30" />
+      </a>
+     
+    </td>
+  </tr>
+</table>
+
+<hr/>
