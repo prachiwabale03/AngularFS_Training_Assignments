@@ -1,0 +1,57 @@
+<h3 align="center">Employee Details</h3>
+
+<div align="center">
+Salary Filter Property - Min Value:
+  <input type="text" [(ngModel)]="filterMin" />
+  Max Value:
+  <input type="text" [(ngModel)]="filterMax" />
+<button (click)="getfilteredData_click()">Get Data</button>
+ <br/><br/>
+</div>
+
+<div >
+    
+    <table width="40%" border="2" bgcolor="skyblue" align="center" cellspacing="3" cellpadding="5">
+        <tr>
+            <th>
+                Employee ID
+            </th>
+            <th>
+                Employee Name
+            </th>
+            <th>
+                Employee Job
+            </th>
+            <th>
+                Employee Salary
+            </th>
+            <th>
+                Employee DeptNo
+            </th>
+        </tr>
+        <tr *ngFor="let empObj of empArray | filterrange:min:max">
+            <th>
+                {{empObj.EmpId}}
+            </th>
+            <th>
+               {{empObj.EmpName}}
+            </th>
+            <th>
+               {{empObj.EmpJob}}
+            </th>
+            <th>
+               {{empObj.EmpSalary}}
+            </th>
+            <th>
+           {{empObj.EmpDeptNo}}
+            </th>
+        </tr>
+
+     
+    </table>
+</div>
+<div *ngIf="empArray.length == 0">
+    <h1>No Employee available for the selected option.</h1>
+  </div>
+
+
