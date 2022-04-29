@@ -1,0 +1,37 @@
+<h3 align="center">Employee Details</h3>
+<div >
+    
+    <table width="40%" border="2" bgcolor="skyblue" align="center" cellspacing="3" cellpadding="5">
+        <tr>
+            <th>
+                Employee ID
+            </th>
+            <th>
+                Employee Name
+            </th>
+            <th>
+                Performance Grade
+            </th>
+           
+        </tr>
+        <tr *ngFor="let empObj of empArray">
+            <th>
+                {{empObj.EmpId}}
+            </th>
+            <th>
+               {{empObj.EmpName}}
+            </th>
+            <th>
+               {{empObj.EmpGrades | grade}}
+            </th>
+           
+        </tr>
+
+     
+    </table>
+</div>
+<div *ngIf="empArray.length == 0">
+    <h1>No Employee available for the selected option.</h1>
+  </div>
+
+
