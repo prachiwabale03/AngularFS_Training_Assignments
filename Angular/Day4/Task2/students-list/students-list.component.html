@@ -1,0 +1,38 @@
+
+
+<div >
+    
+    <table width="70%" border="2" bgcolor="white" align="center" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>
+                Student Roll No
+            </th>
+            <th>
+                Student Name
+            </th>
+            <th>
+                Performance Grade
+            </th>
+           
+        </tr>
+        <tr *ngFor="let empObj of empArray">
+            <th>
+                {{empObj.EmpId}}
+            </th>
+            <th>
+               {{empObj.EmpName}}
+            </th>
+            <th>
+               {{empObj.EmpGrades }}
+            </th>
+           
+        </tr>
+
+     
+    </table>
+</div>
+<div *ngIf="empArray.length == 0">
+    <h1>No Employee available for the selected option.</h1>
+  </div>
+
+

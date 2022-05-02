@@ -1,0 +1,48 @@
+
+<div >
+  
+    
+    <table width="80%" border="2" bgcolor="white" align="center" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>
+                Employee ID
+            </th>
+            <th>
+                Employee Name
+            </th>
+            <th>
+                Employee Job
+            </th>
+            <th>
+                Employee Salary
+            </th>
+            <th>
+                Employee DeptNo
+            </th>
+        </tr>
+        <tr *ngFor="let empObj of empArray">
+            <th>
+                {{empObj.EmpId}}
+            </th>
+            <th>
+               {{empObj.EmpName}}
+            </th>
+            <th>
+               {{empObj.EmpJob}}
+            </th>
+            <th>
+               {{empObj.EmpSalary}}
+            </th>
+            <th>
+           {{empObj.EmpDeptNo}}
+            </th>
+        </tr>
+
+     
+    </table>
+</div>
+<div *ngIf="empArray.length == 0">
+    <h1>No Employee available for the selected option.</h1>
+  </div>
+
+
