@@ -1,0 +1,116 @@
+<style>
+     .btn{
+      
+      display:flexbox;
+      width: 100%;
+      border: none;
+      background-color:blue;
+      padding: 10px 24px;
+      font-size: 12px;
+      cursor: pointer;
+      text-align: center;
+    
+        }
+        
+        .btn1{
+            display:flexbox;
+      width: 46%;
+      border: none;
+      background-color:red;
+      padding: 10px 23px;
+      font-size: 12px;
+      cursor: pointer;
+      text-align: center;
+       margin-left:17px;
+    
+        }
+.center {
+margin: auto;
+width: 40%;
+border: 1px solid black;
+padding: 10px;
+}
+
+.txtsize
+{
+    display:flexbox;
+    font-size: 15px;
+    text-align:justify;
+}
+
+
+.middle
+{
+  
+
+display: flex;
+justify-content: center;
+
+
+}
+
+.insidemiddle
+{
+  
+
+display: flex;
+justify-content: center;
+
+}
+  </style>
+
+
+     <h3 align="center">ToDoInput</h3>
+
+         
+    <div  class="center">
+        <div class="middle">
+        <input size="70" type="text" placeholder="New ToDo" [(ngModel)]="task">
+    </div>
+ 
+</div>
+    <div class="center">
+  <button class="btn1" style="background-color:blue" (click)="Add_Task(task)">Add New Task</button>
+  <button class="btn1" style="background-color:blue" (click)="update_Task(task)">Update Task</button>
+  </div>
+
+    
+  
+
+
+    <h3 align="center">ToDoList</h3>
+
+<div>
+<div *ngFor="let todo of todoList">      
+    <div  class="center">
+        <div class="txtsize">{{todo}}</div>
+    
+     
+       <div align="right" >
+           
+           <input (change)="store_checked(todo)" type="checkbox">
+           <img (click)=select_Click(todo) src="assets/edit.png" width="20">
+      
+           <img (click)=delete_ToDo(todo) src="assets/delete.png" width="20">
+     
+
+    </div>
+  
+</div> 
+<br>
+</div>
+<div class="center">
+
+
+    <button class="btn1"  (click)="delete_Selected()">Delete Done Tasks</button>
+
+
+    <button class="btn1" (click)="delete_AllTasks()">Delete All Tasks</button>
+</div>
+
+    
+
+
+  
+  
+  
