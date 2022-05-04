@@ -1,0 +1,50 @@
+
+
+<style>
+    .btn{
+      
+  display:flexbox;
+  width: 100%;
+  border: none;
+  background-color: #04AA6D;
+  padding: 14px 28px;
+  font-size: 35px;
+  cursor: pointer;
+  text-align: center;
+
+    }
+    .row
+    {
+        border: 1px solid black;
+        border-radius : 10px;
+        width : 200px;
+        padding : 5px;
+        text-align: center;
+        margin: 15px;
+        float:left;
+        box-shadow: 5px 5px 2px black;
+        background-color: whitesmoke;
+    }
+    h4{
+       color: brown;
+     
+    }
+  </style>
+     <button class="btn" align="center" (click)=" getData()">Get User Details</button>
+    <hr>
+
+
+    <div *ngFor="let user of data1" class="column">
+    
+    
+            <div class="row">
+                <img width="60" height="70" src="assets/userimg.jfif">
+              <h4><b>{{user.first_name + user.last_name}}</b></h4>
+              <h5>{{user.email}}</h5>
+        
+            </div>
+          
+     </div>
+  
+  
+  
