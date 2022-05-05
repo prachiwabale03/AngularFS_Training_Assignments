@@ -1,0 +1,25 @@
+<h3>Customizing the http response using RxJS operators</h3>
+<hr/>
+<style>
+    .btn1{
+           
+      width: 10%;
+      border: none;
+      background-color:bisque;
+      padding: 10px 23px;
+     
+      cursor: pointer;
+      text-align: center;
+       margin-left:17px;
+    
+        }
+</style>
+
+<button class="btn1" (click)="getDataByJob_click()"> Employee details based on the job</button>
+<button class="btn1" (click)="getDataByDept_click()">Employee names works in the given department</button>
+<button class="btn1" (click)="getDataNameDesig_click()">All employee names and along with designation</button>
+<button class="btn1" (click)="getDataNotWorkingInDept_click()">Employees who are not working in deptno </button>
+<button class="btn1" (click)="getDataSalary_Sort_click()">Sort the employee based on the salary</button>
+<hr/>
+
+<pre>{{result | json}}</pre>
