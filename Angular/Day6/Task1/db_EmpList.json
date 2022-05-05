@@ -1,0 +1,39 @@
+{
+  "emp": [
+    {
+      "EmpId": "1",
+      "EmpName": "Om",
+      "EmpJob": "Junior Engineer",
+      "EmpSalary": 40000,
+      "EmpDeptNo": 40
+    },
+    {
+      "EmpId": "2",
+      "EmpName": "Supriya",
+      "EmpJob": "Software Developer",
+      "EmpSalary": "100000",
+      "EmpDeptNo": "50"
+    },
+    {
+      "EmpId": "3",
+      "EmpName": "Vaishnavi",
+      "EmpJob": "Tester",
+      "EmpSalary": "20000",
+      "EmpDeptNo": "90"
+    },
+    {
+      "EmpId": "111",
+      "EmpName": "Sanket",
+      "EmpJob": "Junior Engineer",
+      "EmpSalary": 40000,
+      "EmpDeptNo": 40
+    },
+    {
+      "EmpId": "12",
+      "EmpName": "Omkara",
+      "EmpJob": "Junior Engineer",
+      "EmpSalary": 40000,
+      "EmpDeptNo": 40
+    }
+  ]
+}
