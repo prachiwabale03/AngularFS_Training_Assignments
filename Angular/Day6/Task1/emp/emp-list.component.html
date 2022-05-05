@@ -1,0 +1,43 @@
+<h3>Collection of Emp Objects</h3>
+
+
+<input type="text"  [(ngModel)]="EmpId"  placeholder="Emp Id"  />
+<input type="text"  [(ngModel)]="EmpName"  placeholder="Emp Name"  />
+<input type="text"  [(ngModel)]="EmpJob"  placeholder="Emp Job"  />
+<input type="text"  [(ngModel)]="EmpSalary"  placeholder="Emp Salary"  />
+<input type="text"  [(ngModel)]="EmpDeptNo"  placeholder="Emp DeptNo"  />
+<hr/>
+<button (click)="getEmp_click()">Get Emp Details</button>
+<button (click)="addEmp_click()">Add Emp</button>
+<button (click)="updateEmp_click()">Update Emp</button>
+<hr/>
+<table border="2" width="400" cellspacing="0" cellpadding="5">
+  <tr>
+    <th>Emp Id</th>
+    <th>Emp Name</th>
+    <th>Emp Job</th>
+    <th>Emp Salary</th>
+    <th>Emp Dept No</th>
+    <th></th>
+  </tr>
+
+  <tr *ngFor="let item of empArray">
+      <td>{{item.EmpId}}</td>
+      <td>{{item.EmpName}}</td>
+      <td>{{item.EmpJob}}</td>
+      <td>{{item.EmpSalary}}</td>
+      <td>{{item.EmpDeptNo}}</td>
+      <td>
+        <a  (click)="delete_click(item.EmpId)" href="javascript:void(0);">
+          <img src="assets/delete.png" alt="" width="30" />
+        </a>
+        <a  (click)="select_click(item.EmpId)" href="javascript:void(0);">
+          <img src="assets/select.png" alt="" width="30" />
+        </a>
+      </td>
+     
+  </tr>
+
+ 
+
+</table>
