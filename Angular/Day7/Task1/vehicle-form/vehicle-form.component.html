@@ -1,0 +1,161 @@
+<style>
+	.error {   color : Red;  }
+    .col1 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 13px 10px;
+  margin-left: 30%;
+  cursor: pointer;
+  width: 30%;
+  font-size: larger;
+
+}
+
+.col2 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+  
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ .container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+input[type=text] {
+  width: 60%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+* {
+  box-sizing: border-box;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-size: large;
+}
+
+
+
+</style>
+
+
+<hr/>
+<h1 align="center">Vehicle Registration Form</h1>
+<div class="container">
+<form [formGroup]="ownerForm" (submit)="submit_click()">
+
+<div class="row">
+<div class="col1">
+    <label for="name"> Owner Name:</label>
+    </div>
+     
+      <div class="col2">
+      <input type="text" formControlName="oname"  />
+      <span *ngIf="ownerForm.controls['oname'].invalid && ownerForm.controls['oname'].dirty" class="error">Owner's Name is required</span>
+    </div>
+</div>   
+      <br/><br/>
+
+      <div class="row">
+          <div class="col1">
+     <label for="con" >Contact Number:</label>
+    </div>
+    <div class="col2">
+      <input type="text" formControlName="contact1" formControlName="contact"  />
+     <span *ngIf="ownerForm.controls['contact'].invalid && ownerForm.controls['contact'].dirty" class="error">Contact Number is required and should contain 10 digits </span>
+    </div>
+    </div>
+      <br><br>
+      <div class="row">
+          <div class="col1">
+      <label for="email1">Email:</label> 
+    </div>
+    <div class="col2">
+     <input type="text" formControlName="email"  />
+     <span  class="error"  *ngIf="ownerForm.controls['email'].invalid && ownerForm.controls['email'].dirty">
+       Email ID is required and Enter proper e-mail id
+     </span>
+    </div>
+    </div>
+     <br><br>
+     <div class="row">
+     <div class="col1">
+    <label for="res">Vehicle Registration Number :</label>
+</div>
+<div class="col2">
+    <input type="text"	formControlName="rnumber"  />
+      <span  class="error"  *ngIf="ownerForm.controls['rnumber'].invalid && ownerForm.controls['rnumber'].dirty">
+        Vehicle Registration Number should be in proper format.
+      </span>
+</div>
+</div>
+    <br><br>
+<div class="row">
+    <div class="col1">
+   <label for="add">Address : </label> 
+</div>
+    <div class="col2">
+    <input type="text" formControlName="address"  />
+      <span  class="error"  *ngIf="ownerForm.controls['address'].invalid && ownerForm.controls['address'].dirty">
+      Owner's Address is Required
+    </span>
+</div>
+</div>
+    <br><br>
+<div class="row">
+    <div class="col1">
+   <label for="model1">Model:</label>
+</div >
+<div class="col2">
+    <input type="text" formControlName="model"  />
+    <span *ngIf="ownerForm.controls['model'].invalid && ownerForm.controls['model'].dirty" class="error">Enter Proper Model</span>
+</div>
+</div>
+    <br/><br/>
+
+<div class="row">
+   <div class="col1"> 
+      <label for="col"> Color : </label>
+    </div>
+    <div class="col2">
+    <input type="text" formControlName="color"  /> 
+    <span  class="error"  *ngIf="ownerForm.controls['color'].invalid && ownerForm.controls['address'].dirty">
+   Color is Required
+  </span>
+</div>
+</div>
+  <br><br>
+<div class="row">
+    <div class="col1">
+  <label for="y">Year :</label> 
+  </div>
+<div class="col2">
+<input type="text" formControlName="year"  />
+  <span  class="error"  *ngIf="ownerForm.controls['year'].invalid && ownerForm.controls['year'].dirty">
+ Year Should be between 2012 to 2022
+</span>
+</div>
+</div>
+<br><br>
+<button  [disabled]="ownerForm.invalid">Register</button>
+    
+
+</form>
+
+</div>
