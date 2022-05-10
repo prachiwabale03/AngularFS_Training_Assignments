@@ -1,0 +1,23 @@
+<mat-toolbar color="primary"></mat-toolbar>
+  
+<div align="center" class="card">
+    <h2 align="left">Login</h2>
+<form [formGroup]="userForm" class="example-form" align="left" >
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Username" value="" formControlName="username">
+    </mat-form-field>
+    <mat-error *ngIf="userForm.controls['username'].invalid && userForm.controls['username'].dirty">
+       Please Enter username
+      </mat-error> 
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Password" value="" formControlName="password">
+    </mat-form-field>
+    <mat-error *ngIf="userForm.controls['password'].invalid && userForm.controls['password'].dirty">
+        Please enter password
+      </mat-error> 
+  <br>
+  <br>
+ <button [disabled]="userForm.invalid" mat-raised-button color="primary" >Login</button>
+   
+  </form>
+</div>
