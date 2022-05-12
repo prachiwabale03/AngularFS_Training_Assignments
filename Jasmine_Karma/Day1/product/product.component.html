@@ -1,0 +1,12 @@
+<fieldset style="margin:100px">
+    <legend>Total Amount Calculator</legend>
+    Product Name:<input type="text" [(ngModel)]="pname"> <br><br>
+    Quantity:<input type="text" [(ngModel)]="quantity"> <br><br>
+     Unit Price:<input type="text" [(ngModel)]="unitprice">
+     <br>
+     <br>
+     <button (click)="getTotalAmount()">Calculate</button>
+     <br>
+     <br>
+     <p>{{result}}</p>
+</fieldset>
