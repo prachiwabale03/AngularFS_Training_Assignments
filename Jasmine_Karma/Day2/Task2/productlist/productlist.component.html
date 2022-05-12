@@ -1,0 +1,11 @@
+<h2 align="center" style="color: red; margin-top: 15px;">Product List</h2>
+<hr>
+<br>
+<br>
+
+<div>
+		<app-productdetails  *ngFor="let item of productObjs"
+								[productObj]="item"
+								(onProductRemove)="removeProduct($event)">
+		</app-productdetails>
+</div>
